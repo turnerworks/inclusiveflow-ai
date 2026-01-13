@@ -22,6 +22,44 @@
 ## 🎯 Overview
 
 **InclusiveFlow AI** is a disability-friendly communication tool designed specifically for neurodivergent individuals and those with verbal tics, ADHD, autism, Tourette's, or other conditions that affect expression. This tool bridges the gap between authentic self-expression and professional communication requirements.
+## 🗺️ System Architecture
+
+```mermaid
+flowchart TD
+    subgraph Input["💭 RAW INPUT"]
+        Thoughts["🧠 Unfiltered Thoughts"]
+        Voice["🎙️ Voice Input"]
+        Text["⌨️ Text Entry"]
+    end
+
+    subgraph Processing["🤖 AI PROCESSING"]
+        Parser["🔍 Intent Parser"]
+        Structure["📊 Structure Builder"]
+        Tone["🎨 Tone Adjuster"]
+        Access["♿ Accessibility Optimizer"]
+    end
+
+    subgraph Output["✨ CLEAR OUTPUT"]
+        Professional["💼 Professional Message"]
+        Casual["👋 Casual Message"]
+        Summary["📝 Summary"]
+    end
+
+    Thoughts --> Parser
+    Voice --> Parser
+    Text --> Parser
+    Parser --> Structure
+    Structure --> Tone
+    Tone --> Access
+    Access --> Professional
+    Access --> Casual
+    Access --> Summary
+
+    style Input fill:#FFF9C4,color:#000
+    style Processing fill:#40C4D4,color:#000
+    style Output fill:#4CAF50,color:#000
+```
+
 
 ## ✨ Features
 
